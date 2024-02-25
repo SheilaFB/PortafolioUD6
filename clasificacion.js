@@ -1,6 +1,7 @@
 
 var recibirId = new URLSearchParams(window.location.search);
 var id = recibirId.get('id');
+var nombre = recibirId.get('nombre');
 
 const requestOptions = {
     method: "GET",
@@ -17,13 +18,15 @@ const requestOptions = {
     }
 
     function generarTabla(resultados){
+        nombreJuego = document.getElementById("nombreJuego");
+        nombreJuego.innerHTML=nombre;
         contenidoTabla=document.getElementById("bodyTabla");
 
         resultados.forEach(element => {
             tr=document.createElement("tr");
-            th1=document.createElement("th");
+            th1=document.createElement("td");
             th1.innerHTML=element.nombre;
-            th2=document.createElement("th")
+            th2=document.createElement("td")
             th2.innerHTML=element.puntuacion;
             contenidoTabla.appendChild(tr);
             tr.appendChild(th1);

@@ -14,11 +14,11 @@ const requestOptions = {
 
         resultados.forEach(element => {
             tr=document.createElement("tr");
-            th1=document.createElement("th");
+            th1=document.createElement("td");
             th1.innerHTML=element.juego.nombre;
-            th2=document.createElement("th");
+            th2=document.createElement("td");
             th2.innerHTML=element.nombre;
-            th3=document.createElement("th")
+            th3=document.createElement("td")
             th3.innerHTML=element.puntuacion;
             contenidoTabla.appendChild(tr);
             tr.appendChild(th1);
