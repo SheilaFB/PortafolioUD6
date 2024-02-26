@@ -19,7 +19,9 @@ const requestOptions = {
             boton.addEventListener("click", function() {
                 let id = element.id;
                 let nombre = element.nombre;
-                window.location.href = "clasificacion.html?id=" + encodeURIComponent(id) + "&nombre=" + encodeURIComponent(nombre);
+                let imagen = element.imagen;
+                window.location.href = "clasificacion.html?id=" + encodeURIComponent(id) + "&nombre=" + encodeURIComponent(nombre) + 
+                "&imagen=" + encodeURIComponent(imagen);
             });
            padre.appendChild(boton);
         });

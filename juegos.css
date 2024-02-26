@@ -4,12 +4,29 @@
     margin-bottom: 20px;
     margin-top: 20px;
 }
+
+#cabecera button{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+
+#cabecera img{
+  margin-right: 10px;
+  width: 25px;
+}
+
+
 #contenidoBotones{
     display: grid;
     grid-auto-rows: 100px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    column-gap: 30px;
+    row-gap: 30px;
     margin: 0 150px;
     text-decoration: none;
   }
@@ -22,7 +39,6 @@
     font-size: large;
     font-weight: bold;
     color: whitesmoke;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   body{
     margin: 0;
@@ -33,3 +49,29 @@
     background-size: cover;
     font-family: 'poppins', sans-serif;
   }
+
+  #ranking {
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-radius: 9px;
+    background: black;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+   }
+   
+   #ranking:hover {
+    box-shadow: 7px 5px 56px -14px #ffd700;
+   }
+   
+   #ranking:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #ffd700;
+   }
