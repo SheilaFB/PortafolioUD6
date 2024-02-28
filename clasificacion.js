@@ -1,4 +1,4 @@
-
+//recibe los datos enviados desde index.html
 var recibirId = new URLSearchParams(window.location.search);
 var id = recibirId.get('id');
 var nombre = recibirId.get('nombre');
@@ -11,6 +11,7 @@ const requestOptions = {
 
   generarPuntuaciones(id);
 
+    //petición para obtener las puntuaciones del juego seleccionado. LLama al método generarTabla con el result.
     function generarPuntuaciones(id){
         fetch(`http://localhost:8080/api/puntuacion/juego/${id}`, requestOptions)
         .then((response) => response.json())
@@ -18,6 +19,7 @@ const requestOptions = {
         .catch((error) => console.error(error));
     }
 
+    //Método para generar la tabla de puntuaciones. Añade la imagen al fondo.
     function generarTabla(resultados){
         document.body.style.backgroundImage = `url('${imagen}')`;
         let numero = 1;

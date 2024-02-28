@@ -3,12 +3,13 @@ const requestOptions = {
     redirect: "follow"
   };
   
+  //Petición para obtener la mayor puntuación de cada juego
   fetch("http://localhost:8080/api/puntuacion/record", requestOptions)
     .then((response) => response.json())
     .then((result) => generarTabla(result))
     .catch((error) => console.error(error));
 
-
+    //Genera la tabla de ranking con los resultados de la petición 
     function generarTabla(resultados){
         contenidoTabla=document.getElementById("bodyTabla");
 

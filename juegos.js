@@ -3,12 +3,14 @@ const requestOptions = {
     redirect: "follow"
     };
   
+    //petición para obtener la lista de juegos. LLama al método generarBotones con el result.
   fetch("http://localhost:8080/api/juego", requestOptions)
     .then((response) => response.json())
     .then((result) => generarBotones(result))
     .catch((error) => console.error(error));
 
-
+    //genera los botones recorriendo los juegos. Añade el método para abrir el html de puntuación. Envía a la otra ventana el id del juego, 
+    //el nombre y la url de la imagen.
     function generarBotones(resultados){
         padre = document.getElementById("contenidoBotones");
         
